@@ -1,0 +1,362 @@
+*{
+    box-sizing: border-box;
+    
+}
+
+body{
+    margin: 0;
+    font-family: 'PT Serif', serif;
+}
+
+h1{
+    font-size: 2.5rem;
+    
+}
+
+h2{
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.dotted-hr{
+    border: dotted 6px #EFD55E;;
+    border-bottom: none;
+    margin: 20px auto;
+    width: 100px;
+}
+
+a{
+    color:#EFD55E;
+    font-size: 1.1rem;
+    text-decoration: none;    
+}
+
+p{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+[class*="col-"]{
+    float: left;
+    padding: 10px;
+}
+
+
+/* for Mobile */
+
+[class*="col-"]{
+    width: 100%;
+}
+
+.navber{
+    background-color: #0c6168;
+    padding: 1% 3%;
+    text-align: center;
+}
+
+.navber h1{
+    color: #EFD55E;
+    margin: 0;
+    padding-top: 10px;
+}
+
+.navber-menu{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+
+.navber-menu a{
+    background-color: #01191b;
+    border-radius: 25px;
+    margin: 7px 0px;
+    padding: 10px;
+}
+
+.navber-menu a:hover{
+    background-color: rgb(38, 70, 75);
+}
+
+.navber::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* navber design end here */
+
+/* profile design start here */
+.profile{
+    padding: 130px 10px;
+    position: relative;
+    text-align: center;
+    background: rgb(187, 151, 157);
+}
+
+.profile .top-weather-icon{
+    position: absolute;
+    right: 60px;
+    top: 20px;
+    height: 110px; 
+    width: 90px;
+    transition: transform 3s;
+}
+
+.profile .top-weather-icon:hover{
+    transform: rotate(360deg);
+}
+
+.profile-desc h1{
+    color: #EFD55E;
+    font-size: 2.5rem;
+}
+
+.profile-desc p{
+    color:gray;
+    margin: 0 auto 20px auto;
+    text-align: center;
+    width: 95%;
+}
+
+.profile .bottom-weather-icon{
+    height: 110px; 
+    width: 90px;
+    position: absolute;
+    left: 60px;
+    bottom: 10px;
+    transition: transform 3s;
+}
+
+.profile .bottom-weather-icon:hover{
+    transform: rotate(360deg);
+}
+
+.profile::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* about me design start here */
+.about-me{
+    background-color: rgb(23, 95, 95);
+    padding: 1% 7%;
+    text-align: center;
+    color: #EFD55E;
+}
+
+.about-me::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+
+.aboutme-image img{
+    border: 5px solid green;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+}
+
+.about-me p{
+    text-align: center;
+}
+
+.about-me a{
+    font-size: 1.2rem;
+}
+
+.cv-button{
+    background: #052d2f;
+    color: #EFD55E;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* professional experience strart here */
+.work-experience{
+    padding: 1% 0.6%;
+}
+
+.card{
+    background-color: #a39e9e;
+    border-radius: 10px;
+    padding: 10px;
+    transition: 0.3s;
+    height: 700px;
+}
+
+.card:hover{
+    box-shadow: 0px 4px 8px 5px black;
+}
+
+.card-icon{
+    text-align: center;
+}
+
+.card-icon img{
+    margin-top: 2opx;
+    
+}
+
+.rounded-img{
+    border: 5px solid rgb(214, 200, 200) ;
+    border-radius: 10%;
+    
+}
+
+.card-title h2{
+    background-color: #616161;
+    color: #EFD55E;
+    padding: 6px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.work-experience::after{
+    clear: both;
+    display: table;content: '';
+}
+
+.skill-container{
+    padding-right: 45px;
+}
+
+.skill-container li{
+    list-style: none;
+    font-weight: bold;
+    margin: 30px 10px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.skill-container li::before{
+    content: '';
+    position: absolute;
+    top: calc(100% + 5px);
+    width: 100%;
+    height: 10px;
+    left: 0px;
+    background-color: rgb(86, 86, 153, 5);
+    border-radius: 1000px;
+}
+
+.skill-container li::after{
+    content: '';
+    position: absolute;
+    top: calc(100% + 5px);
+    width: 0px;
+    height: 10px;
+    left: 0px;
+    background-color: aqua;
+    border-radius: 1000px;
+
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+
+.skill-container li.html::after{
+    animation-name: html;
+}
+
+@keyframes html{
+    to{
+        width: 80%;
+    }
+}
+
+.skill-container li.css::after{
+    animation-name: css;
+}
+
+@keyframes css{
+    to{
+        width: 60%;
+    }
+}
+
+.skill-container li.boot::after{
+    animation-name: boot;
+}
+
+@keyframes boot{
+    to{
+        width: 50%;
+    }
+}
+
+.skill-container li.java::after{
+    animation-name: java;
+}
+
+@keyframes java{
+    to{
+        width: 80%;
+    }
+}
+
+.skill-container li.jq::after{
+    animation-name: jq;
+}
+
+@keyframes jq{
+    to{
+        width: 70%;
+    }
+}
+
+.skill-container li.nd::after{
+    animation-name: nd;
+}
+
+@keyframes nd{
+    to{
+        width: 40%;
+    }
+}
+.skill-container li.Ex::after{
+    animation-name: Ex;
+}
+
+@keyframes Ex{
+    to{
+        width: 80%;
+    }
+}
+
+.skill-container li.gt::after{
+    animation-name: gt;
+}
+
+@keyframes gt{
+    to{
+        width: 60%;
+    }
+}
+
+.skill-container li.rt::after{
+    animation-name: rt;
+}
+
+@keyframes rt{
+    to{
+        width: 80%;
+    }
+}
+
+
+
+
+   
+
+
+
+
